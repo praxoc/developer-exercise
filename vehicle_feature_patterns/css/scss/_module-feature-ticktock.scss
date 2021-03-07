@@ -1,16 +1,23 @@
 .sft-item {
 	display: flex;
-	flex-direction: row-reverse;
 	align-items: center;
+	flex-direction: column;
 
-	&:nth-child(2n+1) {
-		.sft-image-wrapper {
-			order: 1;
+	@media (min-width: $bp-md) {
+		flex-direction: row-reverse;
+
+		&:nth-child(2n+1) {
+			.sft-image-wrapper {
+				order: 1;
+			}
 		}
 	}
 
 	.sft-image-wrapper {
-		width: 50%;
+		
+		@media (min-width: $bp-md) {
+			width: 50%;
+		}
 	}
 
 	.sft-image {
@@ -18,9 +25,12 @@
 	}
 
 	.sft-text-wrapper {
-		width: 50%;
-	}
+		text-align: center;
 
+		@media (min-width: $bp-md) {
+			width: 50%;
+		}
+	}
 	.sft-heading {
 		margin: 20px;
 		@include primaryFontStack;
