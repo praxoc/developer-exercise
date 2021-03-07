@@ -22,7 +22,7 @@ img {
 
 .header-wrapper {
   height: 60px;
-  background-color: #ff0000;
+  background-color: #e40017;
 }
 
 .sft-item {
@@ -70,5 +70,40 @@ img {
   font-weight: normal;
   font-weight: 300;
   font-size: 16px;
+}
+
+.section-feature-heading-wrapper {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.section-feature-heading-wrapper .sfh-wrapper {
+  max-width: 820px;
+  margin: auto;
+  padding: 80px;
+}
+
+.section-feature-heading-wrapper .sfh-title {
+  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9B9DA1;
+  letter-spacing: 0.1em;
+}
+
+.section-feature-heading-wrapper .sfh-name {
+  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.section-feature-heading-wrapper .sfh-copy {
+  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 18px;
 }
 /*# sourceMappingURL=production.css.map */
