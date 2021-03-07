@@ -1,28 +1,28 @@
 .section-feature-heading-wrapper {
-    background-color: $lightGray;
-    text-align: center;
+	background-color: $lightGray;
+	text-align: center;
 
-    .sfh-wrapper {
-        max-width: 820px;
-        margin: auto;
-        padding: 80px;
-    }
+	.sfh-wrapper {
+		max-width: 820px;
+		margin: auto;
+		padding: 80px;
+	}
 
-    .sfh-title {
-        @include primaryFontStack;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: $darkGray;
-        letter-spacing: 0.1em;
-    }
+	.sfh-title {
+		@include primaryFontStack;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $darkGray;
+		letter-spacing: 0.1em;
+	}
 
-    .sfh-name {
-        @include primaryFontStack;
-        font-size: 36px;
-    }
+	.sfh-name {
+		@include primaryFontStack;
+		font-size: 36px;
+	}
 
-    .sfh-copy {
-        @include primaryFontStackLight;
-        font-size: 18px;
-    }
+	.sfh-copy {
+		@include primaryFontStackLight;
+		font-size: 18px;
+	}
 }
