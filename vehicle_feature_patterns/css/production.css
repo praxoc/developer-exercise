@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.header-wrapper {
+  height: 60px;
+  background-color: #ff0000;
+}
+
+.sft-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sft-item:nth-child(2n+1) .sft-image-wrapper {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.sft-item .sft-image-wrapper {
+  width: 50%;
+}
+
+.sft-item .sft-image {
+  max-width: 100%;
+}
+
+.sft-item .sft-text-wrapper {
+  width: 50%;
+}
+
+.sft-item .sft-heading {
+  margin: 20px;
+  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.sft-item .sft-text {
+  margin: 20px;
+  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 16px;
+}
+/*# sourceMappingURL=production.css.map */
