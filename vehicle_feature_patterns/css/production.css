@@ -96,7 +96,7 @@ img {
 .section-feature-heading-wrapper .sfh-wrapper {
   max-width: 820px;
   margin: auto;
-  padding: 80px;
+  padding: 80px 0;
 }
 
 .section-feature-heading-wrapper .sfh-title {
