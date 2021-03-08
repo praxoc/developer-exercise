@@ -1,9 +1,13 @@
 .sft-item {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
-	@media (min-width: $bp-md) {
+	@include respond-screen($bp-md) {
 		flex-direction: row-reverse;
 
 		&:nth-child(2n+1) {
@@ -15,7 +19,7 @@
 
 	.sft-image-wrapper {
 		
-		@media (min-width: $bp-md) {
+		@include respond-screen($bp-md) {
 			width: 50%;
 		}
 	}
@@ -27,7 +31,7 @@
 	.sft-text-wrapper {
 		text-align: center;
 
-		@media (min-width: $bp-md) {
+		@include respond-screen($bp-md) {
 			width: 50%;
 		}
 	}
