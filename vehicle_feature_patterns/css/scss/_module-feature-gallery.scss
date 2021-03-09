@@ -1,41 +1,41 @@
 .gallery {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 50px;
-	
-	@supports (grid-area: auto) {
-		display: grid;
-		grid-gap: 10px;
-		grid-template-columns: repeat(auto-fill,minmax(25%, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 
-		@include respond-screen($bp-sm) {
-			grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));	
-		}
-	}
+  @supports (grid-area: auto) {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(25%, 1fr));
 
-	&-item {
-		width: 100%;
-		margin-bottom: 2px;
+    @include respond-screen($bp-sm) {
+      grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    }
+  }
 
-		@include respond-screen($bp-md) {
-			width: 24%;
-		}
+  &-item {
+    width: 100%;
+    margin-bottom: 2px;
 
-		@supports (grid-area: auto) {
-			width: auto;
-			margin: 0;
+    @include respond-screen($bp-md) {
+      width: 24%;
+    }
 
-			&-1, &-8 {
-				grid-column: auto / span 2;
-				grid-row: auto / span 2;
-			}
-		}
-	}
+    @supports (grid-area: auto) {
+      width: auto;
+      margin: 0;
 
-	&-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		background-size: cover;
-	}
+      &-1, &-8 {
+        grid-column: auto / span 2;
+        grid-row: auto / span 2;
+      }
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
 }
