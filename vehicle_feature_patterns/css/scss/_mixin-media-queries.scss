@@ -7,7 +7,7 @@ $media-queries: true !default;
                 @content;
             }
         }
-        
+
         @else {
             @media screen and (min-width: $param-width) {
                 @content;
