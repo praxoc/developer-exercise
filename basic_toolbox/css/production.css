@@ -32,8 +32,8 @@ body {
   .toolbox-wrapper {
     position: fixed;
     width: 400px;
-    top: 100px;
-    right: -300px;
+    top: 200px;
+    right: -315px;
     left: auto;
     -webkit-transition: -webkit-transform 250ms ease-in;
     transition: -webkit-transform 250ms ease-in;
@@ -59,13 +59,24 @@ body {
 @media screen and (min-width: 1280px) {
   .toolbox {
     position: absolute;
-    padding: 0;
-    margin: 0;
   }
 }
 
 .toolbox-item {
   list-style: none;
+  width: 33.33%;
+}
+
+@media screen and (min-width: 600px) {
+  .toolbox-item {
+    width: 16.66%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .toolbox-item {
+    width: 100%;
+  }
 }
 
 .toolbox-item:hover .icon-text-wrapper {
@@ -92,6 +103,7 @@ body {
 }
 
 .icon-text-wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,9 +114,15 @@ body {
           justify-content: center;
   background-color: #d8312d;
   padding: 5px;
-  width: 90px;
-  height: 90px;
+  height: 75px;
+  border-right: 1px solid #eb4d55;
   border-bottom: 1px solid #eb4d55;
+}
+
+@media screen and (min-width: 1280px) {
+  .icon-text-wrapper {
+    width: 75px;
+  }
 }
 
 .toolbox-icon-svg {
@@ -115,15 +133,21 @@ body {
 }
 
 .toolbox-icon-text {
+  width: 100%;
   font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   margin: 0 auto;
   padding-top: 10px;
   color: #fff;
-  width: 70px;
+}
+
+@media screen and (min-width: 1280px) {
+  .toolbox-icon-text {
+    width: 70px;
+  }
 }
 
 .toolbox-heading-wrapper {
@@ -146,7 +170,7 @@ body {
   font-size: 16px;
   display: inline-block;
   color: #fff;
-  margin: 40px auto;
+  margin: 33px auto;
   width: 240px;
   text-align: left;
 }
