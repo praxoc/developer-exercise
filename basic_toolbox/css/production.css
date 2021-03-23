@@ -174,4 +174,6 @@ body {
   width: 240px;
   text-align: left;
 }
+
+/* Remove the below comment which will import the file module-toolbox-left and override the floating toolbox positioned right to left */
 /*# sourceMappingURL=production.css.map */
