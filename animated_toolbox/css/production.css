@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: "Roboto-Light";
   src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
@@ -14,6 +14,11 @@
 
 body {
   margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .toolbox-wrapper {
@@ -114,14 +119,14 @@ body {
           justify-content: center;
   background-color: #d8312d;
   padding: 5px;
-  height: 75px;
+  height: 85px;
   border-right: 1px solid #eb4d55;
   border-bottom: 1px solid #eb4d55;
 }
 
 @media screen and (min-width: 1280px) {
   .icon-text-wrapper {
-    width: 75px;
+    width: 85px;
   }
 }
 
