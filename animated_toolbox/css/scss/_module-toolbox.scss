@@ -72,12 +72,12 @@
   justify-content: center;
   background-color: $primaryCol;
   padding: 5px;
-  height: 75px;
+  height: 85px;
   border-right: 1px solid $primaryColLight;
   border-bottom: 1px solid $primaryColLight;
 
   @include respond-screen($bp-md) {
-    width: 75px;
+    width: 85px;
   }
 }
 
