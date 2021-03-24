@@ -4,21 +4,12 @@
   left: 0;
   width: 100%;
 
-  &:hover {
-    transform: none;
-  }
-
   @include respond-screen($bp-md) {
     position: fixed;
     width: 400px;
     top: 200px;
     right: -315px;
     left: auto;
-    transition: transform 250ms ease-in;
-
-    &:hover {
-      transform: translateX(-300px);
-    }
   }
 }
 
@@ -37,6 +28,16 @@
   list-style: none;
   width: 33.33%;
 
+  &:first-child .icon-text-wrapper {
+    border-top-right-radius: 37px;
+    border-top-left-radius: 37px;
+  }
+
+  &:last-child .icon-text-wrapper {
+    border-bottom-right-radius: 37px;
+    border-bottom-left-radius: 37px;
+  }
+
   @include respond-screen($bp-sm) {
     width: 16.661%;
   }
@@ -47,11 +48,11 @@
 
   &:hover {
     .icon-text-wrapper {
-      background-color: $primaryColHover;
+      background-color: $white;
     }
 
     .toolbox-heading-wrapper {
-      background-color: $secondaryColHover;
+      transform: translateX(-300px);
     }
   }
 }
@@ -70,19 +71,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: $primaryCol;
+  background-color: $white;
   padding: 5px;
-  height: 85px;
-  border-right: 1px solid $primaryColLight;
-  border-bottom: 1px solid $primaryColLight;
+  height: 75px;
+  border-bottom: 1px solid $secondaryCol;
 
   @include respond-screen($bp-md) {
-    width: 85px;
+    width: 70px;
   }
 }
 
 .toolbox-icon-svg {
-  fill: $white;
+  fill: $primaryColHover;
   margin: auto;
   width: 40px;
   height: 40px;
@@ -99,6 +99,7 @@
 
   @include respond-screen($bp-md) {
     width: 70px;
+    display: none;
   }
 }
 
@@ -107,18 +108,20 @@
 
   @include respond-screen($bp-md) {
     display: block;
-    background-color: $secondaryCol;
-    width: 300px;
-    border-bottom: 1px solid $secondaryColLight;
+    background-color: $white;
+    width: auto;
+    height: 45px;
+    border-radius: 25px;
+    margin: auto 15px;
+    padding: 0 20px;
+    transition: transform 350ms ease-in-out;
   }
 }
 
 .toolbox-heading-text {
   @include primaryFontStack;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
-  color: $white;
-  margin: 33px auto;
-  width: 240px;
-  text-align: left;
+  color: $primaryColHover;
+  margin: 15px auto;
 }
