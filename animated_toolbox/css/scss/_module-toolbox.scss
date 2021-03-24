@@ -1,0 +1,124 @@
+.toolbox-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &:hover {
+    transform: none;
+  }
+
+  @include respond-screen($bp-md) {
+    position: fixed;
+    width: 400px;
+    top: 200px;
+    right: -315px;
+    left: auto;
+    transition: transform 250ms ease-in;
+
+    &:hover {
+      transform: translateX(-300px);
+    }
+  }
+}
+
+.toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include respond-screen($bp-md) {
+    position: absolute;
+  }
+}
+
+.toolbox-item {
+  list-style: none;
+  width: 33.33%;
+
+  @include respond-screen($bp-sm) {
+    width: 16.661%;
+  }
+
+  @include respond-screen($bp-md) {
+    width: 100%;
+  }
+
+  &:hover {
+    .icon-text-wrapper {
+      background-color: $primaryColHover;
+    }
+
+    .toolbox-heading-wrapper {
+      background-color: $secondaryColHover;
+    }
+  }
+}
+
+.toolbox-item-link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+}
+
+.icon-text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $primaryCol;
+  padding: 5px;
+  height: 75px;
+  border-right: 1px solid $primaryColLight;
+  border-bottom: 1px solid $primaryColLight;
+
+  @include respond-screen($bp-md) {
+    width: 75px;
+  }
+}
+
+.toolbox-icon-svg {
+  fill: $white;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+
+.toolbox-icon-text {
+  width: 100%;
+  @include primaryFontStack;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding-top: 10px;
+  color: $white;
+
+  @include respond-screen($bp-md) {
+    width: 70px;
+  }
+}
+
+.toolbox-heading-wrapper {
+  display: none;
+
+  @include respond-screen($bp-md) {
+    display: block;
+    background-color: $secondaryCol;
+    width: 300px;
+    border-bottom: 1px solid $secondaryColLight;
+  }
+}
+
+.toolbox-heading-text {
+  @include primaryFontStack;
+  font-size: 16px;
+  display: inline-block;
+  color: $white;
+  margin: 33px auto;
+  width: 240px;
+  text-align: left;
+}

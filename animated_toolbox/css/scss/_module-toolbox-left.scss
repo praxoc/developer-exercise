@@ -1,0 +1,15 @@
+.toolbox-wrapper-left {
+  left: 0;
+
+  @include respond-screen($bp-md) {
+    left: -313px;
+
+    &:hover {
+      transform: translateX(299px);
+    }
+  }
+}
+
+.toolbox-item-link-left {
+  flex-direction: row-reverse;
+}
