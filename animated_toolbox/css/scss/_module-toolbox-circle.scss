@@ -1,0 +1,15 @@
+.toolbox-item-circle {
+  margin-bottom: 0;
+
+  @include respond-screen($bp-md) {
+    margin-bottom: 10px;
+  }
+}
+
+.icon-text-wrapper-circle {
+  border-radius: 0;
+
+  @include respond-screen($bp-md) {
+    border-radius: 50%;
+  }
+}
