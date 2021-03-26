@@ -12,6 +12,129 @@
   font-style: normal;
 }
 
+@-webkit-keyframes animateIcon {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translateY(-8px);
+            transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateIcon {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translateY(-8px);
+            transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateToolBoxTextRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8) translateY(-8px) translateX(-285px);
+            transform: scale(0.8) translateY(-8px) translateX(-285px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px) translateX(-285px);
+            transform: scale(1) translateY(0px) translateX(-285px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(-285px);
+            transform: translateX(-285px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@keyframes animateToolBoxTextRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8) translateY(-8px) translateX(-285px);
+            transform: scale(0.8) translateY(-8px) translateX(-285px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px) translateX(-285px);
+            transform: scale(1) translateY(0px) translateX(-285px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(-285px);
+            transform: translateX(-285px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@-webkit-keyframes animateToolBoxTextLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8) translateY(-8px) translateX(285px);
+            transform: scale(0.8) translateY(-8px) translateX(285px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px) translateX(285px);
+            transform: scale(1) translateY(0px) translateX(285px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(285px);
+            transform: translateX(285px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@keyframes animateToolBoxTextLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8) translateY(-8px) translateX(285px);
+            transform: scale(0.8) translateY(-8px) translateX(285px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px) translateX(285px);
+            transform: scale(1) translateY(0px) translateX(285px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(285px);
+            transform: translateX(285px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   background-color: #4d4d4d;
@@ -32,9 +155,9 @@ body {
 @media screen and (min-width: 1280px) {
   .toolbox-wrapper {
     position: fixed;
-    width: 400px;
-    top: 200px;
-    right: -315px;
+    width: 322px;
+    top: 190px;
+    right: -240px;
     left: auto;
   }
 }
@@ -60,16 +183,6 @@ body {
   width: 33.33%;
 }
 
-.toolbox-item:first-child .icon-text-wrapper {
-  border-top-right-radius: 37px;
-  border-top-left-radius: 37px;
-}
-
-.toolbox-item:last-child .icon-text-wrapper {
-  border-bottom-right-radius: 37px;
-  border-bottom-left-radius: 37px;
-}
-
 @media screen and (min-width: 600px) {
   .toolbox-item {
     width: 16.661%;
@@ -82,13 +195,92 @@ body {
   }
 }
 
-.toolbox-item:hover .icon-text-wrapper {
-  background-color: #fff;
+.toolbox-item:first-child .icon-text-wrapper {
+  border-radius: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .toolbox-item:first-child .icon-text-wrapper {
+    border-top-right-radius: 37px;
+    border-top-left-radius: 37px;
+  }
+}
+
+.toolbox-item:last-child .icon-text-wrapper {
+  border-radius: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .toolbox-item:last-child .icon-text-wrapper {
+    border-bottom-right-radius: 37px;
+    border-bottom-left-radius: 37px;
+  }
 }
 
 .toolbox-item:hover .toolbox-heading-wrapper {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
+  -webkit-transform: translateX(-285px);
+          transform: translateX(-285px);
+  opacity: 1;
+}
+
+.toolbox-item:nth-child(1) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.toolbox-item:nth-child(2) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.toolbox-item:nth-child(3) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.toolbox-item:nth-child(4) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.toolbox-item:nth-child(5) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.toolbox-item:nth-child(6) .toolbox-heading-wrapper {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.toolbox-item:nth-child(1) .toolbox-icon-svg {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.toolbox-item:nth-child(2) .toolbox-icon-svg {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.toolbox-item:nth-child(3) .toolbox-icon-svg {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.toolbox-item:nth-child(4) .toolbox-icon-svg {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.toolbox-item:nth-child(5) .toolbox-icon-svg {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.toolbox-item:nth-child(6) .toolbox-icon-svg {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 
 .toolbox-item-link {
@@ -120,11 +312,13 @@ body {
   padding: 5px;
   height: 75px;
   border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
 @media screen and (min-width: 1280px) {
   .icon-text-wrapper {
     width: 70px;
+    border-right: none;
   }
 }
 
@@ -133,6 +327,8 @@ body {
   margin: auto;
   width: 40px;
   height: 40px;
+  -webkit-animation: animateIcon 500ms ease-in-out backwards;
+          animation: animateIcon 500ms ease-in-out backwards;
 }
 
 .toolbox-icon-text {
@@ -144,7 +340,8 @@ body {
   text-decoration: none;
   margin: 0 auto;
   padding-top: 10px;
-  color: #fff;
+  color: #d7302c;
+  display: block;
 }
 
 @media screen and (min-width: 1280px) {
@@ -160,17 +357,21 @@ body {
 
 @media screen and (min-width: 1280px) {
   .toolbox-heading-wrapper {
-    display: block;
-    background-color: #fff;
-    width: auto;
-    height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 200px;
     border-radius: 25px;
-    margin: auto 15px;
-    padding: 0 20px;
-    -webkit-transition: -webkit-transform 350ms ease-in-out;
-    transition: -webkit-transform 350ms ease-in-out;
-    transition: transform 350ms ease-in-out;
-    transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+    background: none;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+    -webkit-animation: animateToolBoxTextRight 2500ms ease-in-out backwards;
+            animation: animateToolBoxTextRight 2500ms ease-in-out backwards;
   }
 }
 
@@ -179,9 +380,15 @@ body {
   font-weight: normal;
   font-weight: 400;
   font-size: 14px;
-  display: inline-block;
+  display: block;
   color: #d7302c;
-  margin: 15px auto;
+  margin: auto 0 auto;
+  width: auto;
+  height: 45px;
+  line-height: 40px;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 25px;
 }
 
 /* Remove the below comment which will import the file module-toolbox-left and override the floating toolbox positioned right to left */

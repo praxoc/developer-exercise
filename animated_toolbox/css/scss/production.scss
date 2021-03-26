@@ -3,11 +3,12 @@
 @import "mixin-fonts";
 @import "mixin-media-queries";
 @import "external-fonts";
+@import "animations";
 
 // base custom
 @import "layout";
 
 // // Modules
-@import "module-toolbox";
+@import "module-toolbox-pill";
 /* Remove the below comment which will import the file module-toolbox-left and override the floating toolbox positioned right to left */
-// @import "module-toolbox-left"; 
+// @import "module-toolbox-pill-left";
