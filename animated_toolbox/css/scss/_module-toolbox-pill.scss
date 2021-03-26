@@ -1,0 +1,189 @@
+.toolbox-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include respond-screen($bp-md) {
+    position: fixed;
+    width: 322px;
+    top: 190px;
+    right: -240px;
+    left: auto;
+  }
+}
+
+.toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include respond-screen($bp-md) {
+    position: absolute;
+  }
+}
+
+.toolbox-item {
+  list-style: none;
+  width: 33.33%;
+
+  @include respond-screen($bp-sm) {
+    width: 16.661%;
+  }
+
+  @include respond-screen($bp-md) {
+    width: 100%;
+  }
+
+  &:first-child .icon-text-wrapper {
+    border-radius: none;
+
+    @include respond-screen($bp-md) {
+      border-top-right-radius: 37px;
+      border-top-left-radius: 37px;
+    }
+  }
+
+  &:last-child .icon-text-wrapper {
+    border-radius: none;
+
+    @include respond-screen($bp-md) {
+      border-bottom-right-radius: 37px;
+      border-bottom-left-radius: 37px;
+    }
+  }
+
+  &:hover {
+    .toolbox-heading-wrapper {
+      transform: translateX(-285px);
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(1) .toolbox-heading-wrapper {
+    animation-delay: 100ms;
+  }
+
+  &:nth-child(2) .toolbox-heading-wrapper {
+    animation-delay: 200ms;
+  }
+
+  &:nth-child(3) .toolbox-heading-wrapper {
+    animation-delay: 300ms;
+  }
+
+  &:nth-child(4) .toolbox-heading-wrapper {
+    animation-delay: 400ms;
+  }
+
+  &:nth-child(5) .toolbox-heading-wrapper {
+    animation-delay: 500ms;
+  }
+
+  &:nth-child(6) .toolbox-heading-wrapper {
+    animation-delay: 600ms;
+  }
+
+  &:nth-child(1) .toolbox-icon-svg {
+    animation-delay: 100ms;
+  }
+
+  &:nth-child(2) .toolbox-icon-svg {
+    animation-delay: 200ms;
+  }
+
+  &:nth-child(3) .toolbox-icon-svg {
+    animation-delay: 300ms;
+  }
+
+  &:nth-child(4) .toolbox-icon-svg {
+    animation-delay: 400ms;
+  }
+
+  &:nth-child(5) .toolbox-icon-svg {
+    animation-delay: 500ms;
+  }
+
+  &:nth-child(6) .toolbox-icon-svg {
+    animation-delay: 600ms;
+  }
+}
+
+.toolbox-item-link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+}
+
+.icon-text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $white;
+  padding: 5px;
+  height: 75px;
+  border-bottom: 1px solid $secondaryCol;
+  border-right: 1px solid $secondaryCol;
+
+  @include respond-screen($bp-md) {
+    width: 70px;
+    border-right: none;
+  }
+}
+
+.toolbox-icon-svg {
+  fill: $primaryColHover;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  animation: animateIcon 500ms ease-in-out backwards;
+}
+
+.toolbox-icon-text {
+  width: 100%;
+  @include primaryFontStack;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding-top: 10px;
+  color: $primaryColHover;
+  display: block;
+
+  @include respond-screen($bp-md) {
+    width: 70px;
+    display: none;
+  }
+}
+
+.toolbox-heading-wrapper {
+  display: none;
+
+  @include respond-screen($bp-md) {
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+    border-radius: 25px;
+    background: none;
+    transition: transform 500ms ease-in-out;
+    animation: animateToolBoxTextRight 2500ms ease-in-out backwards;
+  }
+}
+
+.toolbox-heading-text {
+  @include primaryFontStack;
+  font-size: 14px;
+  display: block;
+  color: $primaryColHover;
+  margin: auto 0 auto;
+  width: auto;
+  height: 45px;
+  line-height: 40px;
+  background-color: $white;
+  padding: 0 20px;
+  border-radius: 25px;
+}
