@@ -1,6 +1,6 @@
 .sass-cache/
-*.css.map
-*.sass.map
+**/*.map
+**/*.css
 *.scss.map
 basic_toolbox/.DS_Store
 .DS_Store

@@ -1,0 +1,29 @@
+.toolbox-wrapper-left {
+  left: 0;
+
+  @include respond-screen($bp-md) {
+    left: -240px;
+  }
+}
+
+.toolbox-item {
+  &:hover {
+    .toolbox-heading-wrapper-left {
+      transform: translateX(280px);
+      opacity: 1;
+    }
+  }
+}
+
+.toolbox-item-link-left {
+  flex-direction: row-reverse;
+}
+
+.toolbox-heading-wrapper-left {
+  margin-left: 12px;
+
+  @include respond-screen($bp-md) {
+    flex-direction: row-reverse;
+    animation: animateToolBoxTextLeft 2500ms ease-in-out backwards;
+  }
+}
