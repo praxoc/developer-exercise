@@ -131,7 +131,7 @@
   border-right: 1px solid $secondaryCol;
 
   @include respond-screen($bp-md) {
-    width: 70px;
+    width: 75px;
     border-right: none;
   }
 }
@@ -179,7 +179,7 @@
   font-size: 14px;
   display: block;
   color: $primaryColHover;
-  margin: auto 0 auto;
+  margin: auto 4px auto;
   width: auto;
   height: 45px;
   line-height: 40px;
