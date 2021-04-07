@@ -4,3 +4,5 @@
 *.scss.map
 basic_toolbox/.DS_Store
 .DS_Store
+*.css
+*.map
