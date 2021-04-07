@@ -20,7 +20,7 @@ html {
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -33,6 +33,10 @@ body {
   margin-right: auto;
   width: 100%;
   max-width: 1500px;
+}
+
+.header-wrapper {
+  background-color: #666;
 }
 
 .nav-primary-list {
