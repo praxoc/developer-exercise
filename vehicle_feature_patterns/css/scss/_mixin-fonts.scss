@@ -1,11 +1,7 @@
 @mixin primaryFontStack {
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto-Regular", Helvetica, Arial, sans-serif;
 }
 
 @mixin primaryFontStackLight {
-  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 300;
+  font-family: "Roboto-Light", Helvetica, Arial, sans-serif;
 }
