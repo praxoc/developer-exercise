@@ -1,0 +1,40 @@
+.header-wrapper {
+  background-color: $primaryCol;
+}
+
+.nav-primary-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.np-item {
+  float: left;
+
+  a:hover {
+    background-color: $black;
+  }
+}
+
+.nav-item-1 {
+  border-left: 1px solid $white;
+}
+
+.nav-item-2 {
+  border-left: solid 1px $white;
+  border-right: solid 1px $white;
+}
+
+.nav-item-3 {
+  border-right: solid 1px $white;
+}
+
+.np-item-link {
+  display: block;
+  color: $white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+}
