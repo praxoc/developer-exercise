@@ -52,6 +52,7 @@
 .button-one,
 .button-two,
 .button-three {
+  @include primaryFontStack;
   color: $black8;
   display: inline-block;
   border-radius: 0;

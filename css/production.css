@@ -98,6 +98,7 @@ body {
 .button-one,
 .button-two,
 .button-three {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   color: #1d1d1d;
   display: inline-block;
   border-radius: 0;
