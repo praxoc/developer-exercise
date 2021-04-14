@@ -45,6 +45,7 @@ img {
 }
 
 .nav-item-link {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -59,8 +60,8 @@ img {
 }
 
 .nav-item-link.active {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
 }
 
 .header-wrapper {

@@ -34,6 +34,7 @@ body {
 }
 
 .nav-item-link {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -48,8 +49,8 @@ body {
 }
 
 .nav-item-link.active {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
 }
 
 .toolbox-wrapper {

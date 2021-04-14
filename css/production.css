@@ -61,8 +61,14 @@ body {
 }
 
 .exercise-buttons {
-  padding: 25px 50px;
+  padding: 0 50px;
   text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .exercise-buttons {
+    padding: 25px 50px;
+  }
 }
 
 @supports (grid-area: auto) {

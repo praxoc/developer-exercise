@@ -24,8 +24,11 @@
 }
 
 .exercise-buttons {
-  padding: 25px 50px;
+  padding: 0 50px;
   text-align: center;
+  @include respond-screen ($bp-md) {
+    padding: 25px 50px;
+  }
 
   @supports (grid-area: auto) {
     display: grid;
