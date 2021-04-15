@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Roboto Light";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.ttf") format("opentype");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.sfh-wrapper {
+  margin: auto 0;
+  padding: 50px 50px;
+}
+
+.sfh-title {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.sfh-name {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
+  font-size: 36px;
+  color: #fff;
+}
+
+.sfh-copy {
+  font-family: "Roboto Light", arial, verdana, sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.exercise-buttons {
+  padding: 0 50px;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .exercise-buttons {
+    padding: 25px 50px;
+  }
+}
+
+@supports (grid-area: auto) {
+  .exercise-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .exercise-buttons {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.button-one {
+  background: #edf000;
+}
+
+.button-two {
+  background: #f15640;
+}
+
+.button-three {
+  background: #27c9b8;
+}
+
+.button-one,
+.button-two,
+.button-three {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
+  color: #1d1d1d;
+  display: inline-block;
+  border-radius: 0;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button-one:hover,
+.button-two:hover,
+.button-three:hover {
+  background: #fff;
+}
+/*# sourceMappingURL=production.css.map */

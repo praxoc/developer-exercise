@@ -1,0 +1,24 @@
+.primary-nav {
+    background-color: $black16;
+    overflow: hidden;
+}
+  
+.nav-item-link {
+    @include primaryFontStack;
+    float: left;
+    color: $lightGray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.nav-item-link:hover {
+    background-color:$lightGray;
+    color: $black;
+}
+  
+.nav-item-link.active {
+    background-color: $white;
+    color: $black16;
+}

@@ -1,15 +1,27 @@
 @font-face {
-  font-family: 'Roboto-Regular';
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Roboto Light";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Roboto Regular";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.ttf") format("opentype");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -25,6 +37,31 @@ img {
   margin-right: auto;
   width: 100%;
   max-width: 1500px;
+}
+
+.primary-nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.nav-item-link {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-item-link:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.nav-item-link.active {
+  background-color: #fff;
+  color: #333;
 }
 
 .header-wrapper {
@@ -81,17 +118,13 @@ img {
 
 .sft-item .sft-heading {
   margin: 20px;
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   font-size: 24px;
 }
 
 .sft-item .sft-text {
   margin: 20px;
-  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 300;
+  font-family: "Roboto Light", arial, verdana, sans-serif;
   font-size: 16px;
 }
 
@@ -107,9 +140,7 @@ img {
 }
 
 .section-feature-heading-wrapper .sfh-title {
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   color: #9B9DA1;
@@ -117,16 +148,12 @@ img {
 }
 
 .section-feature-heading-wrapper .sfh-name {
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   font-size: 36px;
 }
 
 .section-feature-heading-wrapper .sfh-copy {
-  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 300;
+  font-family: "Roboto Light", arial, verdana, sans-serif;
   font-size: 18px;
 }
 

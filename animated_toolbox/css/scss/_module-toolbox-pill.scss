@@ -61,52 +61,47 @@
     }
   }
 
-  &:nth-child(1) .toolbox-heading-wrapper {
-    animation-delay: 100ms;
+
+  &:nth-child(1) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 100ms;
+    }
   }
 
-  &:nth-child(2) .toolbox-heading-wrapper {
-    animation-delay: 200ms;
+  &:nth-child(2) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 200ms;
+    }
   }
 
-  &:nth-child(3) .toolbox-heading-wrapper {
-    animation-delay: 300ms;
+  &:nth-child(3) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 300ms;
+    }
   }
 
-  &:nth-child(4) .toolbox-heading-wrapper {
-    animation-delay: 400ms;
+  &:nth-child(4) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 400ms;
+    }
   }
 
-  &:nth-child(5) .toolbox-heading-wrapper {
-    animation-delay: 500ms;
+  &:nth-child(5) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 500ms;
+    }
   }
 
-  &:nth-child(6) .toolbox-heading-wrapper {
-    animation-delay: 600ms;
-  }
-
-  &:nth-child(1) .toolbox-icon-svg {
-    animation-delay: 100ms;
-  }
-
-  &:nth-child(2) .toolbox-icon-svg {
-    animation-delay: 200ms;
-  }
-
-  &:nth-child(3) .toolbox-icon-svg {
-    animation-delay: 300ms;
-  }
-
-  &:nth-child(4) .toolbox-icon-svg {
-    animation-delay: 400ms;
-  }
-
-  &:nth-child(5) .toolbox-icon-svg {
-    animation-delay: 500ms;
-  }
-
-  &:nth-child(6) .toolbox-icon-svg {
-    animation-delay: 600ms;
+  &:nth-child(6) {
+    .toolbox-heading-wrapper,
+    .toolbox-icon-svg {
+      animation-delay: 600ms;
+    }
   }
 }
 

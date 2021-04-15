@@ -3,7 +3,6 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-size: 100%;
 }
 
 *,
@@ -14,8 +13,12 @@ html {
 
 body {
   margin: 0;
+  background-color: $black16;
 }
 
-img {
-  display: block;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1500px;
 }

@@ -1,15 +1,13 @@
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Roboto Light";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Light.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: "Roboto-Light";
-  src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Roboto Regular";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot");
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.eot#iefix") format("embedded-opentype"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff2") format("woff2"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.woff") format("woff"), url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/carsearch/webfonts/Roboto-Regular.ttf") format("opentype");
 }
 
 @-webkit-keyframes animateIcon {
@@ -131,8 +129,17 @@
 }
 
 html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -140,9 +147,29 @@ body {
   background-color: #4d4d4d;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.primary-nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.nav-item-link {
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-item-link:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.nav-item-link.active {
+  background-color: #fff;
+  color: #333;
 }
 
 .toolbox-wrapper {
@@ -223,61 +250,37 @@ body {
   opacity: 1;
 }
 
-.toolbox-item:nth-child(1) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
-.toolbox-item:nth-child(2) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-
-.toolbox-item:nth-child(3) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-
-.toolbox-item:nth-child(4) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-
-.toolbox-item:nth-child(5) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-
-.toolbox-item:nth-child(6) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-
+.toolbox-item:nth-child(1) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(1) .toolbox-icon-svg {
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
 }
 
+.toolbox-item:nth-child(2) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(2) .toolbox-icon-svg {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
 
+.toolbox-item:nth-child(3) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(3) .toolbox-icon-svg {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
 }
 
+.toolbox-item:nth-child(4) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(4) .toolbox-icon-svg {
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
 
+.toolbox-item:nth-child(5) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(5) .toolbox-icon-svg {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
 
+.toolbox-item:nth-child(6) .toolbox-heading-wrapper,
 .toolbox-item:nth-child(6) .toolbox-icon-svg {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
@@ -333,9 +336,7 @@ body {
 
 .toolbox-icon-text {
   width: 100%;
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   font-size: 13px;
   text-decoration: none;
   margin: 0 auto;
@@ -376,9 +377,7 @@ body {
 }
 
 .toolbox-heading-text {
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
+  font-family: "Roboto Regular", arial, verdana, sans-serif;
   font-size: 14px;
   display: block;
   color: #d7302c;
@@ -393,328 +392,5 @@ body {
 
 /* Remove the below comment which will import the file module-toolbox-pill-left and override the pill toolbox positioned right to left */
 /*  Please comment out line 15 and remove the below comment (line 18) which will import the file module-toolbox-circle and override the floating toolbox pills to circles */
-.toolbox-item-circle {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-item-circle {
-    margin-bottom: 10px;
-  }
-}
-
-.icon-text-wrapper-circle {
-  border-radius: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .icon-text-wrapper-circle {
-    border-radius: 50%;
-  }
-}
-
 /* The below scss file is a combination of all 3 modules above which will automatically convert the pills to circle and postion toolbox to left. Remove the comment below (line 21) to see it live */
-.toolbox-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-wrapper {
-    position: fixed;
-    width: 322px;
-    top: 190px;
-    right: -240px;
-    left: auto;
-  }
-}
-
-.toolbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox {
-    position: absolute;
-  }
-}
-
-.toolbox-item {
-  list-style: none;
-  width: 33.33%;
-}
-
-@media screen and (min-width: 600px) {
-  .toolbox-item {
-    width: 16.661%;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-item {
-    width: 100%;
-  }
-}
-
-.toolbox-item:first-child .icon-text-wrapper {
-  border-radius: none;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-item:first-child .icon-text-wrapper {
-    border-top-right-radius: 37px;
-    border-top-left-radius: 37px;
-  }
-}
-
-.toolbox-item:last-child .icon-text-wrapper {
-  border-radius: none;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-item:last-child .icon-text-wrapper {
-    border-bottom-right-radius: 37px;
-    border-bottom-left-radius: 37px;
-  }
-}
-
-.toolbox-item:hover .toolbox-heading-wrapper {
-  -webkit-transform: translateX(-285px);
-          transform: translateX(-285px);
-  opacity: 1;
-}
-
-.toolbox-item:nth-child(1) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
-.toolbox-item:nth-child(2) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-
-.toolbox-item:nth-child(3) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-
-.toolbox-item:nth-child(4) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-
-.toolbox-item:nth-child(5) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-
-.toolbox-item:nth-child(6) .toolbox-heading-wrapper {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-
-.toolbox-item:nth-child(1) .toolbox-icon-svg {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
-.toolbox-item:nth-child(2) .toolbox-icon-svg {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-
-.toolbox-item:nth-child(3) .toolbox-icon-svg {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-
-.toolbox-item:nth-child(4) .toolbox-icon-svg {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-
-.toolbox-item:nth-child(5) .toolbox-icon-svg {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-
-.toolbox-item:nth-child(6) .toolbox-icon-svg {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-
-.toolbox-item-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-}
-
-.icon-text-wrapper {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #fff;
-  padding: 5px;
-  height: 75px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-
-@media screen and (min-width: 1280px) {
-  .icon-text-wrapper {
-    width: 75px;
-    border-right: none;
-  }
-}
-
-.toolbox-icon-svg {
-  fill: #d7302c;
-  margin: auto;
-  width: 40px;
-  height: 40px;
-  -webkit-animation: animateIcon 500ms ease-in-out backwards;
-          animation: animateIcon 500ms ease-in-out backwards;
-}
-
-.toolbox-icon-text {
-  width: 100%;
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
-  font-size: 13px;
-  text-decoration: none;
-  margin: 0 auto;
-  padding-top: 10px;
-  color: #d7302c;
-  display: block;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-icon-text {
-    width: 70px;
-    display: none;
-  }
-}
-
-.toolbox-heading-wrapper {
-  display: none;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-heading-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 200px;
-    border-radius: 25px;
-    background: none;
-    -webkit-transition: -webkit-transform 500ms ease-in-out;
-    transition: -webkit-transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-    -webkit-animation: animateToolBoxTextRight 2500ms ease-in-out backwards;
-            animation: animateToolBoxTextRight 2500ms ease-in-out backwards;
-  }
-}
-
-.toolbox-heading-text {
-  font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
-  font-size: 14px;
-  display: block;
-  color: #d7302c;
-  margin: auto 4px auto;
-  width: auto;
-  height: 45px;
-  line-height: 40px;
-  background-color: #fff;
-  padding: 0 20px;
-  border-radius: 25px;
-}
-
-.toolbox-wrapper-left {
-  left: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-wrapper-left {
-    left: -240px;
-  }
-}
-
-.toolbox-item:hover .toolbox-heading-wrapper-left {
-  -webkit-transform: translateX(280px);
-          transform: translateX(280px);
-  opacity: 1;
-}
-
-.toolbox-item-link-left {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.toolbox-heading-wrapper-left {
-  margin-left: 12px;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-heading-wrapper-left {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-animation: animateToolBoxTextLeft 2500ms ease-in-out backwards;
-            animation: animateToolBoxTextLeft 2500ms ease-in-out backwards;
-  }
-}
-
-.toolbox-item-circle {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .toolbox-item-circle {
-    margin-bottom: 10px;
-  }
-}
-
-.icon-text-wrapper-circle {
-  border-radius: 0;
-}
-
-@media screen and (min-width: 1280px) {
-  .icon-text-wrapper-circle {
-    border-radius: 50%;
-  }
-}
 /*# sourceMappingURL=production.css.map */
